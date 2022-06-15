@@ -1,25 +1,25 @@
 function createHeader(id,text){
-    const header = document.createElement('header');
-    header.setAttribute('id',id);
-    const h1 = document.createElement('h1');
+    const header = document.createElement("header");
+    header.setAttribute("id",id);
+    const h1 = document.createElement("h1");
     h1.innerHTML = text;
     header.appendChild(h1);
     return header;
 }
 
 function createBtn(id,text){
-    const btn = document.createElement('button');
-    btn.setAttribute('id',id);
+    const btn = document.createElement("button");
+    btn.setAttribute("id",id);
     btn.innerHTML = text;
     return btn;
 }
 
 function createNav(id){
-    const navi = document.createElement('nav');
-    navi.setAttribute('id',id);
+    const navi = document.createElement("nav");
+    navi.setAttribute("id",id);
 
-    const homebtn = createBtn('home','Home');
-    const menubtn = createBtn('menu','Menu');
+    const homebtn = createBtn("home","Home");
+    const menubtn = createBtn("menu","Menu");
 
 
     navi.appendChild(homebtn);
@@ -29,22 +29,22 @@ function createNav(id){
     return navi;
 }
 function createMain(id){
-    const main = document.createElement('main');
-    main.setAttribute('id',id);
+    const main = document.createElement("main");
+    main.setAttribute("id",id);
     return main;
 }
 function loadPage(){
     console.log('called loadPage');
 
-    const content = document.getElementById('content');
+    const content = document.getElementById("content");
 
-    const header = createHeader('header','DOPE STUFF');
+    const header = createHeader("header","DOPE STUFF");
     content.appendChild(header);
 
-    const nav = createNav('navi');
+    const nav = createNav("navi");
     content.appendChild(nav);
 
-    const tabContent = createMain('tab-content');
+    const tabContent = createMain("tab-content");
     content.appendChild(tabContent);
 
 }
